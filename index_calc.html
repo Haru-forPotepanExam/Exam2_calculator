@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="main_calc.css">
+ <title>電卓</title>
+ </head>
+ 
+ <body>
+   
+   <div class="container">
+   <input readonly id="result" type="text" value="">
+ 
+ <table>
+	<tbody>
+		<tr>
+			<td><button type="button" value="7" onclick="num(this);">7</button></td>
+			<td><button type="button" value="8" onclick="num(this);">8</button></td>
+			<td><button type="button" value="9" onclick="num(this);">9</button></td>
+			<td><button type="button" value="+" onclick="edit(this);">+</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" value="4" onclick="num(this);">4</button></td>
+			<td><button type="button" value="5" onclick="num(this);">5</button></td>
+			<td><button type="button" value="6" onclick="num(this);">6</button></td>
+			<td><button type="button" value="-" onclick="edit(this);">-</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" value="1" onclick="num(this);">1</button></td>
+			<td><button type="button" value="2" onclick="num(this);">2</button></td>
+			<td><button type="button" value="3" onclick="num(this);">3</button></td>
+			<td><button type="button" value="*" onclick="edit(this);">*</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" value="0" onclick="zero(this);">0</button></td>
+			<td><button type="button" value="00" onclick="zero(this);">00</button></td>
+			<td><button type="button" value="." onclick="edit(this);">.</button></td>
+			<td><button type="button" value="/" onclick="edit(this);">/</button></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button type="button" value="AC" onclick="reset()">AC</button></td>
+			<td colspan="2"><button type="button" value="=" onclick="enter();">=</button></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+ 
+ <script src="main_calc.js"></script>
+ </body>
+ </html>
