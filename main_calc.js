@@ -24,6 +24,8 @@ function edit(elem) {
     return;
   } else if(result.value.slice(-1) === "/") {
     return;
+  } else if(result.value.slice(-1) === ".") {
+    return;
   } else {
     result.value += data;
   }
@@ -32,10 +34,56 @@ function edit(elem) {
 function zero(elem) {
   const data = event.target.value;
   
+  if(data === ".") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "1") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "2") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "3") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "4") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "5") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "6") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "7") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "8") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "9") {
+    result.value += data;
+  } else {
+    result.value = data;
+  }
+}
+
+function double_zero(elem) {
+  const data = event.target.value;
+  
   if(result.value === "") {
     return;
-  } else {
+  } else if(result.value.slice(0,1) === "1") {
     result.value += data;
+  } else if(result.value.slice(0,1) === "2") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "3") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "4") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "5") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "6") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "7") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "8") {
+    result.value += data;
+  } else if(result.value.slice(0,1) === "9") {
+    result.value += data;
+  } else {
+    result.value = data;
   }
 }
 
@@ -44,5 +92,9 @@ function reset() {
 }
 
 function enter() {
-  result.value = new Function("return " + result.value)();
+  if(result.value === "") {
+    return;
+  } else {
+    result.value = new Function("return " + result.value)();
+  }
 }
