@@ -6,7 +6,11 @@ function num(elem) {
   
   if(result.value === "") {
     result.value = data;
-  } else {
+  } else if(result.value === "0") {
+    result.value = data;
+  } else if(result.value === "00") {
+    result.value = data;
+  }else {
     result.value += data;
   }
 }
